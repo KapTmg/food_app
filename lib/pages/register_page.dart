@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/components/my_button.dart';
 import 'package:food_app/components/my_text_field.dart';
+import 'package:food_app/pages/login_page.dart';
 
 
 class ResgisterPage extends StatefulWidget {
@@ -67,7 +68,7 @@ class _ResgisterPageState extends State<ResgisterPage> {
             ),
 
             MyButton(
-              onTap: () {},
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(onTap: widget.onTap),),),
               text: "Sign Up",
             ),
 

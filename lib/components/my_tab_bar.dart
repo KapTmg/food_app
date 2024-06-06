@@ -19,9 +19,11 @@ class MyTabBar extends StatelessWidget {
   Widget build(BuildContext context) {
 
     
-    return TabBar(
-      tabs: _buildCategoryTabs(),
-      controller: tabController,
+    return Container(
+      child: TabBar(
+        tabs: _buildCategoryTabs(),
+        controller: tabController,
+      ),
     );
   }
 }

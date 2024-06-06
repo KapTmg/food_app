@@ -74,7 +74,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: 'Chocolate Cake',
       description: 'Decadent chocolate cake with rich chocolate frosting',
-      imagePath: 'lib/images/dessert/dessert.jpg',
+      imagePath: 'lib/images/desserts/dessert.jpg',
       price: 3.99,
       category: FoodCategory.dessert,
       availableAddons: [],
@@ -82,7 +82,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: 'Cheesecake',
       description: 'Creamy cheesecake with a graham cracker crust',
-      imagePath: 'lib/images/dessert/dessert.jpg',
+      imagePath: 'lib/images/desserts/dessert.jpg',
       price: 4.50,
       category: FoodCategory.dessert,
       availableAddons: [],

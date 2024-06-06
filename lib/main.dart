@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/auth/login_or_register.dart';
 import 'package:food_app/models/restaurant.dart';
-import 'package:food_app/pages/cart_page.dart';
 import 'package:food_app/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  MultiProvider(
-    providers: [
-      ChangeNotifierProvider(
-        create: (context) => ThemeProvider(),
-      ),
-      ChangeNotifierProvider(
-        create: (context) => Restaurant(),
-      )
-    ],
-    child: const MyApp(),
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ThemeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => Restaurant(),
+        )
+      ],
+      child: const MyApp(),
+    ),
   );
+
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -23,10 +27,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    return Consumer<ThemeProvider>(
+  builder: (context, themeProvider, child) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const CartPage(),
-      theme: Provider.of<ThemeProvider>(context).themeData,
+      home:  const LoginOrRegister(),
+      theme: themeProvider.themeData,
     );
+  },
+);
+
+
+    
   }
 }
