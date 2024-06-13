@@ -1,10 +1,8 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:food_app/auth/authservice.dart';
 import 'package:food_app/components/my_button.dart';
 import 'package:food_app/components/my_text_field.dart';
-import 'package:food_app/pages/login_page.dart';
 
 
 class ResgisterPage extends StatefulWidget {
@@ -18,7 +16,7 @@ class ResgisterPage extends StatefulWidget {
 class _ResgisterPageState extends State<ResgisterPage> {
   @override
   Widget build(BuildContext context) {
-    final TextEditingController nameController = TextEditingController();
+    // final TextEditingController nameController = TextEditingController();
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
     final TextEditingController confirmPasswordController =
@@ -48,7 +46,7 @@ class _ResgisterPageState extends State<ResgisterPage> {
       } else {
         showDialog(
           context: context,
-          builder: (context) => AlertDialog(
+          builder: (context) => const AlertDialog(
             title: Text("Password do not match"),
           ),
         );
@@ -58,7 +56,7 @@ class _ResgisterPageState extends State<ResgisterPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Padding(
-        padding: EdgeInsets.all(25),
+        padding: const EdgeInsets.all(25),
         child: SingleChildScrollView(
           child: SafeArea(
             child: Center(

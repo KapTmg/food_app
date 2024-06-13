@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/components/my_current_location.dart';
 import 'package:food_app/components/my_description_box.dart';
