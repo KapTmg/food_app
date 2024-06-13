@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/components/my_current_location.dart';
 import 'package:food_app/components/my_description_box.dart';
@@ -64,7 +65,11 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
+
+    // final authservice = FirebaseAuth.instance;
+
     return Scaffold(
+
       backgroundColor: Theme.of(context).colorScheme.secondary,
       drawer: const MyDrawer(),
       body: NestedScrollView(
@@ -78,6 +83,8 @@ class _HomePageState extends State<HomePage>
                   endIndent: 25,
                   color: Theme.of(context).colorScheme.secondary,
                 ),
+                const SizedBox(height: 20,),
+                // Text(authservice.currentUser!.uid),
                 const SizedBox(height: 20,),
                 const Padding(
                   padding: EdgeInsets.all(16.0),

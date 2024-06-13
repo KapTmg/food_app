@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "642863148250",
+    "project_id": "minimal-food-app",
+    "storage_bucket": "minimal-food-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642863148250:android:0d01f8b38eb67870bd49e3",
+        "android_client_info": {
+          "package_name": "com.example.food_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdNU-H-JvU9jA-7PZMr214iOljQPHCbzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
